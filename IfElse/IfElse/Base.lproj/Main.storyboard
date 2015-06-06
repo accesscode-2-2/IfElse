@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -35,6 +36,9 @@
                                         <include reference="Zqi-Kp-0sb"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="button:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p2l-xg-ESA"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGu-Ut-VER">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -51,6 +55,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="McS-aa-Sfw">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="176" y="225" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88v-wA-WhJ">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="176" y="291" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgV-Ca-h3f">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="76" y="380" width="248" height="72"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -73,20 +98,23 @@
                                 <exclude reference="iGu-Ut-VER"/>
                                 <exclude reference="NHM-gg-8tT"/>
                                 <exclude reference="aB7-bV-Euy"/>
+                                <exclude reference="McS-aa-Sfw"/>
+                                <exclude reference="88v-wA-WhJ"/>
+                                <exclude reference="wgV-Ca-h3f"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8TF-Rc-kG4"/>
-                                <exclude reference="YG0-rg-2K5"/>
-                                <exclude reference="y9A-GV-8wG"/>
-                                <exclude reference="FUk-zx-HHm"/>
-                                <exclude reference="NaR-3r-PFr"/>
-                                <exclude reference="pIc-Dd-VL9"/>
+                                <exclude reference="u61-Ws-DaA"/>
                                 <exclude reference="4m5-pb-omc"/>
                                 <exclude reference="KoG-0I-h8P"/>
                                 <exclude reference="vUU-ID-K6d"/>
+                                <exclude reference="FUk-zx-HHm"/>
+                                <exclude reference="NaR-3r-PFr"/>
+                                <exclude reference="pIc-Dd-VL9"/>
+                                <exclude reference="8TF-Rc-kG4"/>
+                                <exclude reference="YG0-rg-2K5"/>
+                                <exclude reference="y9A-GV-8wG"/>
                                 <exclude reference="dAR-uW-kvy"/>
                                 <exclude reference="rJf-e4-gKp"/>
-                                <exclude reference="u61-Ws-DaA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -95,23 +123,34 @@
                                 <include reference="iGu-Ut-VER"/>
                                 <include reference="NHM-gg-8tT"/>
                                 <include reference="aB7-bV-Euy"/>
+                                <include reference="McS-aa-Sfw"/>
+                                <include reference="88v-wA-WhJ"/>
+                                <include reference="wgV-Ca-h3f"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8TF-Rc-kG4"/>
-                                <include reference="YG0-rg-2K5"/>
-                                <include reference="y9A-GV-8wG"/>
-                                <include reference="FUk-zx-HHm"/>
-                                <include reference="NaR-3r-PFr"/>
-                                <include reference="pIc-Dd-VL9"/>
+                                <include reference="u61-Ws-DaA"/>
                                 <include reference="4m5-pb-omc"/>
                                 <include reference="KoG-0I-h8P"/>
                                 <include reference="vUU-ID-K6d"/>
+                                <include reference="FUk-zx-HHm"/>
+                                <include reference="NaR-3r-PFr"/>
+                                <include reference="pIc-Dd-VL9"/>
+                                <include reference="8TF-Rc-kG4"/>
+                                <include reference="YG0-rg-2K5"/>
+                                <include reference="y9A-GV-8wG"/>
                                 <include reference="dAR-uW-kvy"/>
                                 <include reference="rJf-e4-gKp"/>
-                                <include reference="u61-Ws-DaA"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="text" destination="wgV-Ca-h3f" id="1cv-vQ-E12"/>
+                        <outlet property="textField1" destination="iGu-Ut-VER" id="a1Z-sU-cGz"/>
+                        <outlet property="textField2" destination="aB7-bV-Euy" id="A7g-pb-Oj6"/>
+                        <outlet property="textField3" destination="NHM-gg-8tT" id="tST-1d-506"/>
+                        <outlet property="toggle" destination="McS-aa-Sfw" id="Ux2-Nn-5hf"/>
+                        <outlet property="toggle2" destination="88v-wA-WhJ" id="n3u-vw-P4q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
