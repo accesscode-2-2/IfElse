@@ -120,6 +120,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="messageLabel" destination="h9L-Nm-wmw" id="Z6i-9u-g76"/>
                         <outlet property="textField1" destination="iGu-Ut-VER" id="zlL-d7-aVF"/>
                         <outlet property="textField2" destination="aB7-bV-Euy" id="Rfl-5j-B2Z"/>
                     </connections>
