@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -35,11 +36,27 @@
                                         <include reference="Zqi-Kp-0sb"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ESj-lW-9x3"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGu-Ut-VER">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="368" id="9D9-AS-Dai"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9D9-AS-Dai"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="9D9-AS-Dai"/>
+                                    </mask>
+                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NHM-gg-8tT">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -51,6 +68,300 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uzb-ET-1gK">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="247" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKJ-jH-d8B">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="278" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMe-SJ-56k">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="169" y="247" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcu-zR-FKm">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="220" y="247" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylY-tU-ns3">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="118" y="247" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JXI-Th-7Xy">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="169" y="278" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p1Y-2c-vqW">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="118" y="278" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3RE-y6-JYU">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="278" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmS-dz-zud">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="307" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vsg-Ou-V6k">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="118" y="307" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQI-6R-B2g">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="307" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WJB-oC-MQz">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="338" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xs-Pk-eyt">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="220" y="307" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdH-lE-ZVX">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="338" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53Z-a0-aMn">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="220" y="278" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ly-ev-3PZ">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="169" y="307" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAU-qQ-7fR">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="368" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zfe-TB-AHC">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="118" y="368" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1a-KQ-puC">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="368" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xtn-dz-IgS">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="220" y="368" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0a6-lj-y20">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="169" y="368" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lHf-h6-RFf">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="396" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ir-Lw-v4b">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="118" y="396" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93K-yo-UrU">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="396" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f48-dg-271">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="220" y="396" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lie-PZ-MNs">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="169" y="396" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SA3-GJ-XMA">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="220" y="338" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9GM-pl-DLS">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="118" y="338" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tj9-BI-pD3">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="169" y="338" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVf-hx-Q2k">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="426" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sb-kr-kWI">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="118" y="426" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ibz-xn-5Q7">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="426" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBs-UO-Fsr">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="220" y="426" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dnu-8p-jdh">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="270" y="247" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jHt-DI-XiN">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="270" y="307" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2j9-Wc-k5p">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="270" y="278" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v7U-XN-Zb8">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="270" y="368" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yzS-w6-8ih">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="270" y="396" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tZU-zS-QoT">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="270" y="338" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dqp-6A-OtE">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="270" y="426" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3R-xS-LlP">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="169" y="426" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NX6-su-puC">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="318" y="247" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mZK-gi-31x">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="318" y="307" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlG-CF-8VB">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="318" y="278" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p8b-Ao-OgH">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="318" y="368" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKg-UQ-IJb">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="318" y="396" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zbh-kk-WqJ">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="318" y="338" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P0f-Vd-CY6">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="318" y="426" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gXs-xK-Qbi">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="247" width="51" height="31"/>
+                                </variation>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -73,20 +384,69 @@
                                 <exclude reference="iGu-Ut-VER"/>
                                 <exclude reference="NHM-gg-8tT"/>
                                 <exclude reference="aB7-bV-Euy"/>
+                                <exclude reference="uzb-ET-1gK"/>
+                                <exclude reference="RKJ-jH-d8B"/>
+                                <exclude reference="RMe-SJ-56k"/>
+                                <exclude reference="zcu-zR-FKm"/>
+                                <exclude reference="ylY-tU-ns3"/>
+                                <exclude reference="JXI-Th-7Xy"/>
+                                <exclude reference="p1Y-2c-vqW"/>
+                                <exclude reference="3RE-y6-JYU"/>
+                                <exclude reference="dmS-dz-zud"/>
+                                <exclude reference="Vsg-Ou-V6k"/>
+                                <exclude reference="aQI-6R-B2g"/>
+                                <exclude reference="WJB-oC-MQz"/>
+                                <exclude reference="1xs-Pk-eyt"/>
+                                <exclude reference="qdH-lE-ZVX"/>
+                                <exclude reference="53Z-a0-aMn"/>
+                                <exclude reference="4Ly-ev-3PZ"/>
+                                <exclude reference="kAU-qQ-7fR"/>
+                                <exclude reference="Zfe-TB-AHC"/>
+                                <exclude reference="y1a-KQ-puC"/>
+                                <exclude reference="Xtn-dz-IgS"/>
+                                <exclude reference="0a6-lj-y20"/>
+                                <exclude reference="lHf-h6-RFf"/>
+                                <exclude reference="9Ir-Lw-v4b"/>
+                                <exclude reference="93K-yo-UrU"/>
+                                <exclude reference="f48-dg-271"/>
+                                <exclude reference="lie-PZ-MNs"/>
+                                <exclude reference="SA3-GJ-XMA"/>
+                                <exclude reference="9GM-pl-DLS"/>
+                                <exclude reference="Tj9-BI-pD3"/>
+                                <exclude reference="mVf-hx-Q2k"/>
+                                <exclude reference="8sb-kr-kWI"/>
+                                <exclude reference="Ibz-xn-5Q7"/>
+                                <exclude reference="sBs-UO-Fsr"/>
+                                <exclude reference="Dnu-8p-jdh"/>
+                                <exclude reference="jHt-DI-XiN"/>
+                                <exclude reference="2j9-Wc-k5p"/>
+                                <exclude reference="v7U-XN-Zb8"/>
+                                <exclude reference="yzS-w6-8ih"/>
+                                <exclude reference="tZU-zS-QoT"/>
+                                <exclude reference="Dqp-6A-OtE"/>
+                                <exclude reference="b3R-xS-LlP"/>
+                                <exclude reference="NX6-su-puC"/>
+                                <exclude reference="mZK-gi-31x"/>
+                                <exclude reference="hlG-CF-8VB"/>
+                                <exclude reference="p8b-Ao-OgH"/>
+                                <exclude reference="SKg-UQ-IJb"/>
+                                <exclude reference="Zbh-kk-WqJ"/>
+                                <exclude reference="P0f-Vd-CY6"/>
+                                <exclude reference="gXs-xK-Qbi"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8TF-Rc-kG4"/>
-                                <exclude reference="YG0-rg-2K5"/>
-                                <exclude reference="y9A-GV-8wG"/>
-                                <exclude reference="FUk-zx-HHm"/>
-                                <exclude reference="NaR-3r-PFr"/>
-                                <exclude reference="pIc-Dd-VL9"/>
+                                <exclude reference="u61-Ws-DaA"/>
                                 <exclude reference="4m5-pb-omc"/>
                                 <exclude reference="KoG-0I-h8P"/>
                                 <exclude reference="vUU-ID-K6d"/>
+                                <exclude reference="FUk-zx-HHm"/>
+                                <exclude reference="NaR-3r-PFr"/>
+                                <exclude reference="pIc-Dd-VL9"/>
+                                <exclude reference="8TF-Rc-kG4"/>
+                                <exclude reference="YG0-rg-2K5"/>
+                                <exclude reference="y9A-GV-8wG"/>
                                 <exclude reference="dAR-uW-kvy"/>
                                 <exclude reference="rJf-e4-gKp"/>
-                                <exclude reference="u61-Ws-DaA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -95,26 +455,130 @@
                                 <include reference="iGu-Ut-VER"/>
                                 <include reference="NHM-gg-8tT"/>
                                 <include reference="aB7-bV-Euy"/>
+                                <include reference="uzb-ET-1gK"/>
+                                <include reference="RKJ-jH-d8B"/>
+                                <include reference="RMe-SJ-56k"/>
+                                <include reference="zcu-zR-FKm"/>
+                                <include reference="ylY-tU-ns3"/>
+                                <include reference="JXI-Th-7Xy"/>
+                                <include reference="p1Y-2c-vqW"/>
+                                <include reference="3RE-y6-JYU"/>
+                                <include reference="dmS-dz-zud"/>
+                                <include reference="Vsg-Ou-V6k"/>
+                                <include reference="aQI-6R-B2g"/>
+                                <include reference="WJB-oC-MQz"/>
+                                <include reference="1xs-Pk-eyt"/>
+                                <include reference="qdH-lE-ZVX"/>
+                                <include reference="53Z-a0-aMn"/>
+                                <include reference="4Ly-ev-3PZ"/>
+                                <include reference="kAU-qQ-7fR"/>
+                                <include reference="Zfe-TB-AHC"/>
+                                <include reference="y1a-KQ-puC"/>
+                                <include reference="Xtn-dz-IgS"/>
+                                <include reference="0a6-lj-y20"/>
+                                <include reference="lHf-h6-RFf"/>
+                                <include reference="9Ir-Lw-v4b"/>
+                                <include reference="93K-yo-UrU"/>
+                                <include reference="f48-dg-271"/>
+                                <include reference="lie-PZ-MNs"/>
+                                <include reference="SA3-GJ-XMA"/>
+                                <include reference="9GM-pl-DLS"/>
+                                <include reference="Tj9-BI-pD3"/>
+                                <include reference="mVf-hx-Q2k"/>
+                                <include reference="8sb-kr-kWI"/>
+                                <include reference="Ibz-xn-5Q7"/>
+                                <include reference="sBs-UO-Fsr"/>
+                                <include reference="Dnu-8p-jdh"/>
+                                <include reference="jHt-DI-XiN"/>
+                                <include reference="2j9-Wc-k5p"/>
+                                <include reference="v7U-XN-Zb8"/>
+                                <include reference="yzS-w6-8ih"/>
+                                <include reference="tZU-zS-QoT"/>
+                                <include reference="Dqp-6A-OtE"/>
+                                <include reference="b3R-xS-LlP"/>
+                                <include reference="NX6-su-puC"/>
+                                <include reference="mZK-gi-31x"/>
+                                <include reference="hlG-CF-8VB"/>
+                                <include reference="p8b-Ao-OgH"/>
+                                <include reference="SKg-UQ-IJb"/>
+                                <include reference="Zbh-kk-WqJ"/>
+                                <include reference="P0f-Vd-CY6"/>
+                                <include reference="gXs-xK-Qbi"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8TF-Rc-kG4"/>
-                                <include reference="YG0-rg-2K5"/>
-                                <include reference="y9A-GV-8wG"/>
-                                <include reference="FUk-zx-HHm"/>
-                                <include reference="NaR-3r-PFr"/>
-                                <include reference="pIc-Dd-VL9"/>
+                                <include reference="u61-Ws-DaA"/>
                                 <include reference="4m5-pb-omc"/>
                                 <include reference="KoG-0I-h8P"/>
                                 <include reference="vUU-ID-K6d"/>
+                                <include reference="FUk-zx-HHm"/>
+                                <include reference="NaR-3r-PFr"/>
+                                <include reference="pIc-Dd-VL9"/>
+                                <include reference="8TF-Rc-kG4"/>
+                                <include reference="YG0-rg-2K5"/>
+                                <include reference="y9A-GV-8wG"/>
                                 <include reference="dAR-uW-kvy"/>
                                 <include reference="rJf-e4-gKp"/>
-                                <include reference="u61-Ws-DaA"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="switch1" destination="uzb-ET-1gK" id="g0q-Ax-We7"/>
+                        <outlet property="switch10" destination="53Z-a0-aMn" id="nKt-1V-QWf"/>
+                        <outlet property="switch11" destination="dmS-dz-zud" id="U33-QA-78S"/>
+                        <outlet property="switch12" destination="aQI-6R-B2g" id="hWi-Xi-mXd"/>
+                        <outlet property="switch13" destination="Vsg-Ou-V6k" id="4xg-VN-eRv"/>
+                        <outlet property="switch14" destination="4Ly-ev-3PZ" id="TN6-Ut-9qC"/>
+                        <outlet property="switch15" destination="1xs-Pk-eyt" id="yPz-5T-xeJ"/>
+                        <outlet property="switch16" destination="WJB-oC-MQz" id="ovw-Kh-RX2"/>
+                        <outlet property="switch17" destination="qdH-lE-ZVX" id="caa-0h-sDU"/>
+                        <outlet property="switch18" destination="9GM-pl-DLS" id="jaO-nt-prO"/>
+                        <outlet property="switch19" destination="Tj9-BI-pD3" id="cip-Kd-3ia"/>
+                        <outlet property="switch2" destination="gXs-xK-Qbi" id="Qb3-6L-VhW"/>
+                        <outlet property="switch20" destination="SA3-GJ-XMA" id="VX6-lc-uSS"/>
+                        <outlet property="switch21" destination="kAU-qQ-7fR" id="Nab-bG-d1s"/>
+                        <outlet property="switch22" destination="y1a-KQ-puC" id="m3j-Ep-A5Q"/>
+                        <outlet property="switch23" destination="Zfe-TB-AHC" id="Nvj-t0-yhf"/>
+                        <outlet property="switch24" destination="0a6-lj-y20" id="H7y-8b-ewG"/>
+                        <outlet property="switch25" destination="Xtn-dz-IgS" id="Hi5-g1-pf8"/>
+                        <outlet property="switch26" destination="lHf-h6-RFf" id="5mj-zm-Ax0"/>
+                        <outlet property="switch27" destination="93K-yo-UrU" id="qzw-tI-wH6"/>
+                        <outlet property="switch28" destination="9Ir-Lw-v4b" id="gPH-Lv-v1H"/>
+                        <outlet property="switch29" destination="lie-PZ-MNs" id="L4z-vy-gYK"/>
+                        <outlet property="switch3" destination="ylY-tU-ns3" id="ecQ-ua-9NF"/>
+                        <outlet property="switch30" destination="f48-dg-271" id="C3L-GY-K6Z"/>
+                        <outlet property="switch31" destination="mVf-hx-Q2k" id="GgH-e3-hXn"/>
+                        <outlet property="switch32" destination="Ibz-xn-5Q7" id="lZK-id-4uq"/>
+                        <outlet property="switch33" destination="8sb-kr-kWI" id="5fk-3E-bbg"/>
+                        <outlet property="switch34" destination="b3R-xS-LlP" id="IWL-xX-Bde"/>
+                        <outlet property="switch35" destination="sBs-UO-Fsr" id="47h-Z4-9JY"/>
+                        <outlet property="switch36" destination="Dnu-8p-jdh" id="hBx-IS-Wuv"/>
+                        <outlet property="switch37" destination="2j9-Wc-k5p" id="M9D-7j-o2Q"/>
+                        <outlet property="switch38" destination="jHt-DI-XiN" id="gfO-4M-FsY"/>
+                        <outlet property="switch39" destination="tZU-zS-QoT" id="1x2-Uq-OOK"/>
+                        <outlet property="switch4" destination="RMe-SJ-56k" id="Cab-gw-Q91"/>
+                        <outlet property="switch40" destination="v7U-XN-Zb8" id="qDe-3b-1En"/>
+                        <outlet property="switch41" destination="yzS-w6-8ih" id="pIO-4l-7BK"/>
+                        <outlet property="switch42" destination="Dqp-6A-OtE" id="aMo-lt-mdx"/>
+                        <outlet property="switch43" destination="NX6-su-puC" id="n7y-f6-hAZ"/>
+                        <outlet property="switch44" destination="hlG-CF-8VB" id="AAX-y2-sb3"/>
+                        <outlet property="switch45" destination="mZK-gi-31x" id="3sv-rY-gLK"/>
+                        <outlet property="switch46" destination="Zbh-kk-WqJ" id="h3U-w8-pwd"/>
+                        <outlet property="switch47" destination="p8b-Ao-OgH" id="CU2-sH-2qU"/>
+                        <outlet property="switch48" destination="SKg-UQ-IJb" id="N8u-eZ-5p5"/>
+                        <outlet property="switch49" destination="P0f-Vd-CY6" id="8l8-u6-4g6"/>
+                        <outlet property="switch5" destination="zcu-zR-FKm" id="qq9-ku-qj3"/>
+                        <outlet property="switch6" destination="RKJ-jH-d8B" id="wiN-1K-yop"/>
+                        <outlet property="switch7" destination="3RE-y6-JYU" id="UMc-Bo-tSY"/>
+                        <outlet property="switch8" destination="p1Y-2c-vqW" id="dPI-UG-e4P"/>
+                        <outlet property="switch9" destination="JXI-Th-7Xy" id="6xn-XA-8eq"/>
+                        <outlet property="textField1" destination="iGu-Ut-VER" id="bB2-Pu-bbN"/>
+                        <outlet property="textField2" destination="aB7-bV-Euy" id="BbT-Xn-jID"/>
+                        <outlet property="textField3" destination="NHM-gg-8tT" id="dua-xe-uX8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-15" y="384"/>
         </scene>
     </scenes>
 </document>
