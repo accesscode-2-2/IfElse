@@ -10,18 +10,59 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UITextField *textField2;
+@property (weak, nonatomic) IBOutlet UITextField *textField3;
+@property (weak, nonatomic) IBOutlet UISwitch *toggle;
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UITextView *textView1;
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (IBAction)buttonTapped:(id)sender {
+    NSLog(@"tapped");
+    
+    NSString *one = self.textField1.text;
+    NSString *two = self.textField2.text;
+    NSString *three = self.textField3.text;
+
+    BOOL  oneEqualsTwo = [one isEqualToString:two];
+    
+    if(oneEqualsTwo){
+      //  NSLog(@"First two are equal");
+        [self.toggle setOn:YES animated:YES];
+    }else{
+        [self.toggle setOn:NO animated:YES];
+    }
+    
+    
+    NSInteger intFromString1 = [one integerValue];
+    NSInteger intFromString2 = [two integerValue];
+    
+    BOOL integersAreEqual = intFromString1==intFromString2;
+    
+    NSInteger integer1Length = [one length];
+    NSInteger integer2Length = [two length];
+    
+    
+    BOOL integersLengthAreEqual = integer1Length==integer2Length;
+    
+    if(integersAreEqual&&integersLengthAreEqual){
+          self.textView1.text = @"You extracted integers from the string bruh!";
+        [self.toggle setOn:YES animated:YES];
+        [self.activityIndicator startAnimating];
+    }else{
+        self.textView1.text = @"Not cool bro!";
+        [self.toggle setOn:NO animated:YES];
+        [self.activityIndicator stopAnimating];
+    }
+    
+    
+    NSLog(@"%@",one);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
