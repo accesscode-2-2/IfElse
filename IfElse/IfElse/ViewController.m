@@ -40,22 +40,18 @@
         NSLog(@"Success!");
         self.messageLabel.text = @"SUCCESS!";
         [self.view setBackgroundColor:accepted];
-        //self.textField3.backgroundColor = [UIColor whiteColor];
     } else if (validateUserName && !validatePassword) {
         NSLog(@"User forgot password");
         self.messageLabel.text = @"Invalid password";;
         [self.view setBackgroundColor:denied];
-        //self.textField3.backgroundColor = [UIColor whiteColor];
     } else if (!validateUserName && validatePassword) {
         NSLog(@"User forgot user name");
         self.messageLabel.text = @"Invalid user name";
         [self.view setBackgroundColor:denied];
-        //self.textField3.backgroundColor = [UIColor whiteColor];
     } else {
         NSLog(@"User forgot everything");
         self.messageLabel.text = @"DENIED!";
         [self.view setBackgroundColor:denied];
-        //self.textField3.backgroundColor = [UIColor whiteColor];
     }
 }
 
