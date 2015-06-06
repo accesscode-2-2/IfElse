@@ -416,6 +416,7 @@
 				8DFE640E1B22A54400D3D7AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DFE640F1B22A54400D3D7AA /* Build configuration list for PBXNativeTarget "IfElseTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				8DFE64111B22A54400D3D7AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
