@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -35,18 +36,48 @@
                                         <include reference="Zqi-Kp-0sb"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="button:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="25w-dd-pD1"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGu-Ut-VER">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NHM-gg-8tT">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NHM-gg-8tT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Favorite Food" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aB7-bV-Euy">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aB7-bV-Euy">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BBJ-x4-hod">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="176" y="253" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hkG-83-axA">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="176" y="202" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nx2-Il-cGT">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="176" y="304" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zuv-0g-fUQ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="68" y="359" width="264" height="159"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGu-Ut-VER">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -70,51 +101,69 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="z7z-6R-wIs"/>
-                                <exclude reference="iGu-Ut-VER"/>
                                 <exclude reference="NHM-gg-8tT"/>
                                 <exclude reference="aB7-bV-Euy"/>
+                                <exclude reference="BBJ-x4-hod"/>
+                                <exclude reference="hkG-83-axA"/>
+                                <exclude reference="nx2-Il-cGT"/>
+                                <exclude reference="Zuv-0g-fUQ"/>
+                                <exclude reference="iGu-Ut-VER"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8TF-Rc-kG4"/>
-                                <exclude reference="YG0-rg-2K5"/>
-                                <exclude reference="y9A-GV-8wG"/>
-                                <exclude reference="FUk-zx-HHm"/>
-                                <exclude reference="NaR-3r-PFr"/>
-                                <exclude reference="pIc-Dd-VL9"/>
+                                <exclude reference="u61-Ws-DaA"/>
                                 <exclude reference="4m5-pb-omc"/>
                                 <exclude reference="KoG-0I-h8P"/>
                                 <exclude reference="vUU-ID-K6d"/>
+                                <exclude reference="FUk-zx-HHm"/>
+                                <exclude reference="NaR-3r-PFr"/>
+                                <exclude reference="pIc-Dd-VL9"/>
+                                <exclude reference="8TF-Rc-kG4"/>
+                                <exclude reference="YG0-rg-2K5"/>
+                                <exclude reference="y9A-GV-8wG"/>
                                 <exclude reference="dAR-uW-kvy"/>
                                 <exclude reference="rJf-e4-gKp"/>
-                                <exclude reference="u61-Ws-DaA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="z7z-6R-wIs"/>
-                                <include reference="iGu-Ut-VER"/>
                                 <include reference="NHM-gg-8tT"/>
                                 <include reference="aB7-bV-Euy"/>
+                                <include reference="BBJ-x4-hod"/>
+                                <include reference="hkG-83-axA"/>
+                                <include reference="nx2-Il-cGT"/>
+                                <include reference="Zuv-0g-fUQ"/>
+                                <include reference="iGu-Ut-VER"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8TF-Rc-kG4"/>
-                                <include reference="YG0-rg-2K5"/>
-                                <include reference="y9A-GV-8wG"/>
-                                <include reference="FUk-zx-HHm"/>
-                                <include reference="NaR-3r-PFr"/>
-                                <include reference="pIc-Dd-VL9"/>
+                                <include reference="u61-Ws-DaA"/>
                                 <include reference="4m5-pb-omc"/>
                                 <include reference="KoG-0I-h8P"/>
                                 <include reference="vUU-ID-K6d"/>
+                                <include reference="FUk-zx-HHm"/>
+                                <include reference="NaR-3r-PFr"/>
+                                <include reference="pIc-Dd-VL9"/>
+                                <include reference="8TF-Rc-kG4"/>
+                                <include reference="YG0-rg-2K5"/>
+                                <include reference="y9A-GV-8wG"/>
                                 <include reference="dAR-uW-kvy"/>
                                 <include reference="rJf-e4-gKp"/>
-                                <include reference="u61-Ws-DaA"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="labelOutput" destination="Zuv-0g-fUQ" id="DV9-bb-x8t"/>
+                        <outlet property="switch1" destination="hkG-83-axA" id="boj-aw-r5d"/>
+                        <outlet property="switch2" destination="BBJ-x4-hod" id="Gz0-L8-9Rl"/>
+                        <outlet property="switch3" destination="nx2-Il-cGT" id="0jc-99-Hn5"/>
+                        <outlet property="textField1" destination="iGu-Ut-VER" id="sWg-L4-uaZ"/>
+                        <outlet property="textField2" destination="aB7-bV-Euy" id="rlH-GV-qfc"/>
+                        <outlet property="textField3" destination="NHM-gg-8tT" id="PzJ-Hi-S6g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="379.5" y="305"/>
         </scene>
     </scenes>
 </document>
