@@ -10,18 +10,45 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UITextField *textField2;
+@property (weak, nonatomic) IBOutlet UITextField *textField3;
+
+@property (weak, nonatomic) IBOutlet UISwitch *toggle;
+@property (weak, nonatomic) IBOutlet UISwitch *toggle2;
+
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)buttonTapped:(id)sender {
+    NSLog(@"tapped");
+    
+    
+    NSString *one = self.textField1.text;
+    NSString *two = self.textField2.text;
+    NSString *three = self.textField3.text;
+    
+    BOOL oneEqualsTwo = [one isEqualToString:two];
+    if (oneEqualsTwo) {
+        [self.toggle setOn:YES animated:YES];
+    } else {
+        [self.toggle setOn:NO animated:YES];
+        //Second Switch
+    }
+    BOOL twoEqualsThree = [two isEqualToString:three];
+    if (twoEqualsThree) {
+        [self.toggle2 setOn:YES animated:YES];
+    } else {
+        [self.toggle2 setOn:NO animated:YES];
+        
+    }
+    
+    
+    
+    
+    
 }
 
 @end

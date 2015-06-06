@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -51,6 +52,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rd4-50-4Om">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="208" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FQJ-JC-63k">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="278" y="208" width="51" height="31"/>
+                                </variation>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -73,20 +86,22 @@
                                 <exclude reference="iGu-Ut-VER"/>
                                 <exclude reference="NHM-gg-8tT"/>
                                 <exclude reference="aB7-bV-Euy"/>
+                                <exclude reference="Rd4-50-4Om"/>
+                                <exclude reference="FQJ-JC-63k"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8TF-Rc-kG4"/>
-                                <exclude reference="YG0-rg-2K5"/>
-                                <exclude reference="y9A-GV-8wG"/>
-                                <exclude reference="FUk-zx-HHm"/>
-                                <exclude reference="NaR-3r-PFr"/>
-                                <exclude reference="pIc-Dd-VL9"/>
+                                <exclude reference="u61-Ws-DaA"/>
                                 <exclude reference="4m5-pb-omc"/>
                                 <exclude reference="KoG-0I-h8P"/>
                                 <exclude reference="vUU-ID-K6d"/>
+                                <exclude reference="FUk-zx-HHm"/>
+                                <exclude reference="NaR-3r-PFr"/>
+                                <exclude reference="pIc-Dd-VL9"/>
+                                <exclude reference="8TF-Rc-kG4"/>
+                                <exclude reference="YG0-rg-2K5"/>
+                                <exclude reference="y9A-GV-8wG"/>
                                 <exclude reference="dAR-uW-kvy"/>
                                 <exclude reference="rJf-e4-gKp"/>
-                                <exclude reference="u61-Ws-DaA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -95,23 +110,29 @@
                                 <include reference="iGu-Ut-VER"/>
                                 <include reference="NHM-gg-8tT"/>
                                 <include reference="aB7-bV-Euy"/>
+                                <include reference="Rd4-50-4Om"/>
+                                <include reference="FQJ-JC-63k"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8TF-Rc-kG4"/>
-                                <include reference="YG0-rg-2K5"/>
-                                <include reference="y9A-GV-8wG"/>
-                                <include reference="FUk-zx-HHm"/>
-                                <include reference="NaR-3r-PFr"/>
-                                <include reference="pIc-Dd-VL9"/>
+                                <include reference="u61-Ws-DaA"/>
                                 <include reference="4m5-pb-omc"/>
                                 <include reference="KoG-0I-h8P"/>
                                 <include reference="vUU-ID-K6d"/>
+                                <include reference="FUk-zx-HHm"/>
+                                <include reference="NaR-3r-PFr"/>
+                                <include reference="pIc-Dd-VL9"/>
+                                <include reference="8TF-Rc-kG4"/>
+                                <include reference="YG0-rg-2K5"/>
+                                <include reference="y9A-GV-8wG"/>
                                 <include reference="dAR-uW-kvy"/>
                                 <include reference="rJf-e4-gKp"/>
-                                <include reference="u61-Ws-DaA"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="toggle" destination="Rd4-50-4Om" id="g8S-5a-cmD"/>
+                        <outlet property="toggle2" destination="FQJ-JC-63k" id="MGw-df-zGR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
