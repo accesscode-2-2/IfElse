@@ -46,10 +46,6 @@
         NSLog(@"%@ is the darkness, Simba. You must never go there.", three);
     }
     
-    NSString *textField1Value = self.textField1.text;
-    
-    NSLog(@"%@", textField1Value);
-    
     
 }
 
