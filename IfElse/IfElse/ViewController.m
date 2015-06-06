@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField3;
 @property (weak, nonatomic) IBOutlet UISwitch *toggle;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UITextView *textView1;
+
 @end
 
 @implementation ViewController
@@ -39,13 +42,17 @@
     NSInteger intFromString1 = [one integerValue];
     NSInteger intFromString2 = [two integerValue];
     
-    if(intFromString1==intFromString2){
-          NSLog(@"You extracted integers from the string bruh!");
+    BOOL integersAreEqual = intFromString1==intFromString2;
+    
+    if(integersAreEqual){
+          self.textView1.text = @"You extracted integers from the string bruh!";
         [self.toggle setOn:YES animated:YES];
+        [self.activityIndicator startAnimating];
     }else{
         [self.toggle setOn:NO animated:YES];
+        [self.activityIndicator stopAnimating];
     }
-        
+    
     
     NSLog(@"%@",one);
 }

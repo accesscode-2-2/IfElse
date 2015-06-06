@@ -61,6 +61,31 @@
                                     <rect key="frame" x="42" y="199" width="51" height="31"/>
                                 </variation>
                             </switch>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="GqV-Gl-Qp1">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="171" y="210" width="20" height="20"/>
+                                </variation>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gft-hs-Is2">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="24" y="236" width="190" height="91"/>
+                                </variation>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3n6-jp-XHb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="24" y="238" width="190" height="91"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -84,6 +109,9 @@
                                 <exclude reference="NHM-gg-8tT"/>
                                 <exclude reference="aB7-bV-Euy"/>
                                 <exclude reference="bzx-t6-LyK"/>
+                                <exclude reference="GqV-Gl-Qp1"/>
+                                <exclude reference="gft-hs-Is2"/>
+                                <exclude reference="3n6-jp-XHb"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="u61-Ws-DaA"/>
@@ -107,6 +135,9 @@
                                 <include reference="NHM-gg-8tT"/>
                                 <include reference="aB7-bV-Euy"/>
                                 <include reference="bzx-t6-LyK"/>
+                                <include reference="GqV-Gl-Qp1"/>
+                                <include reference="gft-hs-Is2"/>
+                                <include reference="3n6-jp-XHb"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="u61-Ws-DaA"/>
@@ -125,9 +156,11 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="GqV-Gl-Qp1" id="iIM-NM-uKE"/>
                         <outlet property="textField1" destination="iGu-Ut-VER" id="w2P-OX-tzY"/>
                         <outlet property="textField2" destination="aB7-bV-Euy" id="qcn-vH-9tW"/>
                         <outlet property="textField3" destination="NHM-gg-8tT" id="kOB-3i-xZf"/>
+                        <outlet property="textView1" destination="3n6-jp-XHb" id="eHH-iP-DzG"/>
                         <outlet property="toggle" destination="bzx-t6-LyK" id="PTY-Tl-8eU"/>
                     </connections>
                 </viewController>
