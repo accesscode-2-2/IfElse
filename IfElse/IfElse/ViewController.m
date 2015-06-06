@@ -29,9 +29,9 @@
     
     BOOL oneEqualsTwo = [one isEqualToString:two];
     if (oneEqualsTwo) {
-        [self.toggle setOn:YES animated:YES];
-    } else {
         [self.toggle setOn:NO animated:YES];
+    } else {
+        [self.toggle setOn:YES animated:YES];
     }
     
     if ([three isEqualToString:@"Brooklyn"]) {
