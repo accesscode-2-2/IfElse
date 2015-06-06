@@ -44,11 +44,18 @@
     
     BOOL integersAreEqual = intFromString1==intFromString2;
     
-    if(integersAreEqual){
+    NSInteger integer1Length = [one length];
+    NSInteger integer2Length = [two length];
+    
+    
+    BOOL integersLengthAreEqual = integer1Length==integer2Length;
+    
+    if(integersAreEqual&&integersLengthAreEqual){
           self.textView1.text = @"You extracted integers from the string bruh!";
         [self.toggle setOn:YES animated:YES];
         [self.activityIndicator startAnimating];
     }else{
+        self.textView1.text = @"Not cool bro!";
         [self.toggle setOn:NO animated:YES];
         [self.activityIndicator stopAnimating];
     }
