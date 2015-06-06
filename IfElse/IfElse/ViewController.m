@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField2;
 @property (weak, nonatomic) IBOutlet UITextField *textField3;
 @property (weak, nonatomic) IBOutlet UISwitch *toggle;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
 
 @end
 
@@ -36,8 +37,16 @@
         [self.toggle setOn:YES animated:YES];
     } else {
         [self.toggle setOn:NO animated:NO];
+        
     }
     
+    if (one && [two length] ==0){
+        NSLog(@"one not two or three");
+        [self.slider setValue:0 animated:YES];
+    } else if (two){
+        
+        [self.slider setValue:5 animated:NO];
+    }
     
 }
 

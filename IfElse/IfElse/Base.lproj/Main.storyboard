@@ -61,6 +61,12 @@
                                     <rect key="frame" x="134" y="212" width="51" height="31"/>
                                 </variation>
                             </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y7W-9F-GGn">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="99" y="373" width="118" height="31"/>
+                                </variation>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -84,6 +90,7 @@
                                 <exclude reference="NHM-gg-8tT"/>
                                 <exclude reference="aB7-bV-Euy"/>
                                 <exclude reference="1GR-fn-1Ie"/>
+                                <exclude reference="Y7W-9F-GGn"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="u61-Ws-DaA"/>
@@ -107,6 +114,7 @@
                                 <include reference="NHM-gg-8tT"/>
                                 <include reference="aB7-bV-Euy"/>
                                 <include reference="1GR-fn-1Ie"/>
+                                <include reference="Y7W-9F-GGn"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="u61-Ws-DaA"/>
@@ -125,6 +133,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="slider" destination="Y7W-9F-GGn" id="js1-mc-oqC"/>
                         <outlet property="textField1" destination="iGu-Ut-VER" id="o3r-15-qfV"/>
                         <outlet property="textField2" destination="aB7-bV-Euy" id="mR9-fg-H8e"/>
                         <outlet property="textField3" destination="NHM-gg-8tT" id="pXy-DH-FRI"/>
