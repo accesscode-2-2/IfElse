@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -35,6 +36,9 @@
                                         <include reference="Zqi-Kp-0sb"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Om-k5-LO8"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGu-Ut-VER">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -50,7 +54,43 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="75" width="368" height="30"/>
+                                </variation>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNE-fI-64l">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="176" y="289" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="gOq-Ht-PXa">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="-1" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="nic-67-V1k">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="58" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="77g-1S-Kin">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="120" width="42" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -59,7 +99,9 @@
                             <constraint firstItem="aB7-bV-Euy" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="FUk-zx-HHm"/>
                             <constraint firstItem="NHM-gg-8tT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="KoG-0I-h8P"/>
                             <constraint firstItem="aB7-bV-Euy" firstAttribute="top" secondItem="iGu-Ut-VER" secondAttribute="bottom" constant="30" id="NaR-3r-PFr"/>
+                            <constraint firstAttribute="centerY" secondItem="NNE-fI-64l" secondAttribute="centerY" id="VF9-zP-Qus"/>
                             <constraint firstItem="iGu-Ut-VER" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="YG0-rg-2K5"/>
+                            <constraint firstAttribute="centerX" secondItem="NNE-fI-64l" secondAttribute="centerX" id="YYy-9B-kdg"/>
                             <constraint firstItem="z7z-6R-wIs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="dAR-uW-kvy"/>
                             <constraint firstItem="aB7-bV-Euy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="pIc-Dd-VL9"/>
                             <constraint firstItem="z7z-6R-wIs" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="rJf-e4-gKp"/>
@@ -73,6 +115,10 @@
                                 <exclude reference="iGu-Ut-VER"/>
                                 <exclude reference="NHM-gg-8tT"/>
                                 <exclude reference="aB7-bV-Euy"/>
+                                <exclude reference="NNE-fI-64l"/>
+                                <exclude reference="gOq-Ht-PXa"/>
+                                <exclude reference="nic-67-V1k"/>
+                                <exclude reference="77g-1S-Kin"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="8TF-Rc-kG4"/>
@@ -84,6 +130,8 @@
                                 <exclude reference="4m5-pb-omc"/>
                                 <exclude reference="KoG-0I-h8P"/>
                                 <exclude reference="vUU-ID-K6d"/>
+                                <exclude reference="VF9-zP-Qus"/>
+                                <exclude reference="YYy-9B-kdg"/>
                                 <exclude reference="dAR-uW-kvy"/>
                                 <exclude reference="rJf-e4-gKp"/>
                                 <exclude reference="u61-Ws-DaA"/>
@@ -95,6 +143,10 @@
                                 <include reference="iGu-Ut-VER"/>
                                 <include reference="NHM-gg-8tT"/>
                                 <include reference="aB7-bV-Euy"/>
+                                <include reference="NNE-fI-64l"/>
+                                <include reference="gOq-Ht-PXa"/>
+                                <include reference="nic-67-V1k"/>
+                                <include reference="77g-1S-Kin"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="8TF-Rc-kG4"/>
@@ -106,15 +158,27 @@
                                 <include reference="4m5-pb-omc"/>
                                 <include reference="KoG-0I-h8P"/>
                                 <include reference="vUU-ID-K6d"/>
+                                <include reference="VF9-zP-Qus"/>
+                                <include reference="YYy-9B-kdg"/>
                                 <include reference="dAR-uW-kvy"/>
                                 <include reference="rJf-e4-gKp"/>
                                 <include reference="u61-Ws-DaA"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="label1" destination="gOq-Ht-PXa" id="nqe-q2-L5D"/>
+                        <outlet property="label2" destination="nic-67-V1k" id="Gdi-KI-4p9"/>
+                        <outlet property="label3" destination="77g-1S-Kin" id="9qb-R5-LWn"/>
+                        <outlet property="textField1" destination="iGu-Ut-VER" id="AtM-Sn-E5X"/>
+                        <outlet property="textField2" destination="aB7-bV-Euy" id="9w9-yG-O7W"/>
+                        <outlet property="textField3" destination="NHM-gg-8tT" id="JJb-EH-RKQ"/>
+                        <outlet property="toggle" destination="NNE-fI-64l" id="y0D-UZ-bmo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="349.5" y="337"/>
         </scene>
     </scenes>
 </document>
