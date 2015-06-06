@@ -9,19 +9,47 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *first;
+@property (weak, nonatomic) IBOutlet UITextField *second;
+@property (weak, nonatomic) IBOutlet UITextField *third;
+@property (weak, nonatomic) IBOutlet UISwitch *toggle;
+
 
 @end
 
 @implementation ViewController
+- (IBAction)buttonTapped:(id)sender {
+    NSLog(@"tapped");
+    
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSString *first = self.first.text;
+    NSString *second = self.second.text;
+    NSString *third = self.third.text;
+    BOOL robot = NO;
+    
+    
+    NSLog(@"%@", first);
+    NSLog(@"%@", second);
+    NSLog(@"%@", third);
+    
+    BOOL firstEquals = [ first isEqualToString: @"Chris"];
+    BOOL secondEquals = [ second isEqualToString:@"knickstape"];
+    BOOL thirdEquals = [ third isEqualToString:@"No"];
+    
+    if (firstEquals && secondEquals && thirdEquals) {
+        NSLog(@"Welcome");
+        [self.toggle setOn:YES animated:YES];
+    } else { NSLog(@"Rejected");
+        [self.toggle setOn:NO animated:YES];
+    }
+    
+   
+    
+    
+    
+  
+    
+    
 }
 
 @end
