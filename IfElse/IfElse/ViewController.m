@@ -22,35 +22,37 @@
     NSString *one = self.textField1.text;
     NSString *two = self.textField2.text;
     UIColor *denied = [UIColor colorWithRed:247.0f/255.0f
-                                        green:45.0f/255.0f
-                                         blue:45.0f/255.0f
-                                        alpha:1.0f];
-    UIColor *accepted = [UIColor colorWithRed:26.0f/255.0f
-                                        green:242.0f/255.0f
-                                         blue:12.0f/255.0f
-                                        alpha:1.0f];
+        green:45.0f/255.0f blue:45.0f/255.0f alpha:1.0f];
+    UIColor *accepted = [UIColor colorWithRed:19.0f/255.0f
+        green:204.0f/255.0f blue:12.0f/255.0f alpha:1.0f];
     
     NSString *userName = @"user";
     NSString *password = @"password";
+    
+    UIFont *font = [UIFont fontWithName:@"FetteBauerscheAntiquaShaddowUNZPro" size:20];
     
     BOOL validateUserName = [one isEqualToString:userName];
     BOOL validatePassword = [two isEqualToString:password];
     
     if (validateUserName && validatePassword) {
         NSLog(@"Success!");
-        self.messageLabel.text = @"SUCCESS!";
+        self.messageLabel.font = [font fontWithSize:70];
+        self.messageLabel.text = @"success!";
         [self.view setBackgroundColor:accepted];
     } else if (validateUserName && !validatePassword) {
         NSLog(@"User forgot password");
-        self.messageLabel.text = @"Invalid password";;
+        self.messageLabel.font = [font fontWithSize:50];
+        self.messageLabel.text = @"Invalid Password!";;
         [self.view setBackgroundColor:denied];
     } else if (!validateUserName && validatePassword) {
         NSLog(@"User forgot user name");
-        self.messageLabel.text = @"Invalid user name";
+        self.messageLabel.font = [font fontWithSize:50];
+        self.messageLabel.text = @"Invalid User Name!";
         [self.view setBackgroundColor:denied];
     } else {
         NSLog(@"User forgot everything");
-        self.messageLabel.text = @"DENIED!";
+        self.messageLabel.font = [font fontWithSize:70];
+        self.messageLabel.text = @"denied!";
         [self.view setBackgroundColor:denied];
     }
 }
