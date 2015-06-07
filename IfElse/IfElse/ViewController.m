@@ -42,12 +42,12 @@
     } else if (validateUserName && !validatePassword) {
         NSLog(@"User forgot password");
         self.messageLabel.font = [font fontWithSize:50];
-        self.messageLabel.text = @"Invalid Password!";;
+        self.messageLabel.text = @"invalid password!";;
         [self.view setBackgroundColor:denied];
     } else if (!validateUserName && validatePassword) {
         NSLog(@"User forgot user name");
         self.messageLabel.font = [font fontWithSize:50];
-        self.messageLabel.text = @"Invalid User Name!";
+        self.messageLabel.text = @"invalid user name!";
         [self.view setBackgroundColor:denied];
     } else {
         NSLog(@"User forgot everything");
