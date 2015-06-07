@@ -9,19 +9,26 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UITextField *textField2;
+@property (weak, nonatomic) IBOutlet UITextField *textField3;
+@property (weak, nonatomic) IBOutlet UISwitch *toggle;
 
 @end
 
 @implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)buttonTapped:(id)sender {
+    NSLog(@"tapped");
+    NSString *one = self.textField1.text;
+    NSString *two = self.textField2.text;
+    NSString *three = self.textField3.text;
+    
+    BOOL oneEqualsTwo = [two isEqualToString:three];
+    if (oneEqualsTwo) {
+        [self.toggle setOn:YES animated:YES];
+    } else {
+        [self.toggle setOn:NO animated:YES];
+    }
 }
 
 @end
